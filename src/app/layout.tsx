@@ -1,7 +1,7 @@
-
 import React, { ReactNode } from 'react';
 import './globals.css';
-import { Navbar, Footer } from './components/Navbar';
+import { LandingNavbar } from './components/Landing/Navbar'; // Fixed import path
+import { Footer } from './components/Footer/Footer'; // Fixed import path
 
 export const metadata = {
   title: "IC Candle Clone",
@@ -18,11 +18,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       </head>
       <body className="flex flex-col min-h-screen bg-[#ffffff]">
         <header className="sticky top-0 z-50">
-          <Navbar />
+          <LandingNavbar />
         </header>
         <main className="flex-grow">
-          {/* {/* <Features /> */}
-          {/* // <Pricing /> */}
           {children}
         </main>
         <footer>
